@@ -3,6 +3,7 @@ from rest_framework.exceptions import AuthenticationFailed
 from django.db import close_old_connections
 from accounts.tokenauthentication import JWTAuthentication
 
+
 class JWTWebsocketMiddleware(BaseMiddleware):
     async def __call__(self, scope, receive, send):
         close_old_connections()
